@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ZILA AI DeFi Platform</title>
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.min.js"></script>
+</head>
+
+<body>
+
+<nav>
+<div class="logo" onclick="goHome()">ZILA AI</div>
+
+<ul>
+<li onclick="showPage('home')">Home</li>
+<li onclick="showPage('swap')">Swap</li>
+<li onclick="showPage('staking')">Staking</li>
+<li onclick="showPage('airdrop')">Airdrop</li>
+<li onclick="showPage('chart')">Live Chart</li>
+</ul>
+
+<button id="connectBtn" onclick="connectWallet()">Connect Wallet</button>
+</nav>
+
+<!-- HOME -->
+
+<section id="home" class="page active">
+
+<h1>ZILA AI DeFi Ecosystem</h1>
+<p>Trade • Stake • Earn • Build</p>
+
+<div class="tokenBox">
+
+<div>
+<h3>ZILA Balance</h3>
+<p id="zilaBalance">0</p>
+</div>
+
+<div>
+<h3>POL Balance</h3>
+<p id="maticBalance">0</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SWAP -->
+
+<section id="swap" class="page">
+
+<h2>Swap Tokens</h2>
+
+<div class="swapBox">
+
+<input id="amountIn" placeholder="Amount">
+
+<select id="tokenIn">
+<option>ZILA</option>
+<option>USDT</option>
+<option>POL</option>
+</select>
+
+↓
+
+<input id="amountOut" placeholder="Receive">
+
+<select id="tokenOut">
+<option>USDT</option>
+<option>ZILA</option>
+<option>POL</option>
+</select>
+
+<button>Swap</button>
+
+</div>
+
+</section>
+
+<!-- STAKING -->
+
+<section id="staking" class="page">
+
+<h2>ZILA Staking</h2>
+
+<div class="pool">
+
+<h3>Stake ZILA → Earn ZILA</h3>
+<p>APR: 120%</p>
+
+<input placeholder="Amount">
+
+<button>Stake</button>
+<button>Claim</button>
+
+</div>
+
+</section>
+
+<!-- AIRDROP -->
+
+<section id="airdrop" class="page">
+
+<h2>ZILA Airdrop</h2>
+
+<p>1. Connect Wallet</p>
+<p>2. Follow X</p>
+<p>3. Submit wallet</p>
+
+<button>Join Airdrop</button>
+
+</section>
+
+<!-- CHART -->
+
+<section id="chart" class="page">
+
+<h2>ZILA Live Chart</h2>
+
+<iframe
+src="https://web3.okx.com/ul/vEAxAod"
+width="100%"
+height="700"
+style="border:none;border-radius:15px;">
+</iframe>
+
+</section>
+
+<script src="app.js"></script>
+
+</body>
+</html>
